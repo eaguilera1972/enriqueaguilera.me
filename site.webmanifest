@@ -1,0 +1,11 @@
+{
+  "name": "Enrique Aguilera",
+  "short_name": "Enrique Aguilera",
+  "icons": [
+    { "src": "/images/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/images/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#2B5A58",
+  "background_color": "#F5F6F3",
+  "display": "browser"
+}
