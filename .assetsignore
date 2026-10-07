@@ -1,6 +1,7 @@
 .git
 .gitignore
 .claude
+.impeccable
 .wrangler
 wrangler.jsonc
 README.md
