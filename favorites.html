@@ -151,8 +151,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     cursor: pointer;
   }
   .react-btn:hover { border-color: var(--pine); }
+  .react-btn:disabled { opacity: 0.6; cursor: default; }
   .react-btn.active { color: var(--paper); border-color: var(--ink); background: var(--ink); }
   .react-btn.active.react-up { background: var(--pine); border-color: var(--pine); }
+  .react-count { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .react-btn.active .react-count { color: inherit; }
 
   .site-footer {
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
@@ -199,8 +202,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Dumb and Dumber</p>
             <p class="fav-note">My all-time favorite comedy. I can quote it start to finish.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -218,8 +221,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">The Office</p>
             <p class="fav-note">Michael Scott lives rent-free in my head. Best comfort watch there is.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -235,8 +238,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Alfred</p>
             <p class="fav-note">The first thing I install on any new Mac. Keyboard-driven everything.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -246,8 +249,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Obsidian</p>
             <p class="fav-note">Where all my notes and thinking actually live.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -263,8 +266,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Granola</p>
             <p class="fav-note">Meeting notes that write themselves. I haven't taken manual notes since.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -274,8 +277,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Superhuman</p>
             <p class="fav-note">The fastest email client I've ever used. Inbox zero actually feels achievable.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -291,8 +294,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Barcelona</p>
             <p class="fav-note">Where I grew up. Still feels like home every time I'm back.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -302,8 +305,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Boston</p>
             <p class="fav-note">Where I live now and run everything from.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -319,8 +322,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Michael Jackson</p>
             <p class="fav-note">The greatest entertainer of all time, full stop.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -330,8 +333,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">George Michael</p>
             <p class="fav-note">Criminally underrated songwriter. Faith is a perfect album.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -347,8 +350,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">FC Barcelona</p>
             <p class="fav-note">M&eacute;s que un club. Been with them through everything.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -358,8 +361,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="fav-title">Lionel Messi</p>
             <p class="fav-note">The GOAT. Not up for debate.</p>
             <div class="fav-react">
-              <button type="button" class="react-btn react-up">👍 Love it too</button>
-              <button type="button" class="react-btn react-down">👎 Not for me</button>
+              <button type="button" class="react-btn react-up">👍 Love it too <span class="react-count" data-count="up">0</span></button>
+              <button type="button" class="react-btn react-down">👎 Not for me <span class="react-count" data-count="down">0</span></button>
             </div>
           </div>
         </article>
@@ -375,35 +378,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  function storageKey(id) { return "fav_reaction_" + id; }
-
+  var cards = {};
   document.querySelectorAll("[data-fav]").forEach(function (card) {
     var id = card.getAttribute("data-fav");
-    var upBtn = card.querySelector(".react-up");
-    var downBtn = card.querySelector(".react-down");
-    var current = null;
-    try { current = localStorage.getItem(storageKey(id)); } catch (e) {}
-
-    function render() {
-      upBtn.classList.toggle("active", current === "up");
-      downBtn.classList.toggle("active", current === "down");
-      upBtn.setAttribute("aria-pressed", current === "up");
-      downBtn.setAttribute("aria-pressed", current === "down");
-    }
-
-    function choose(value) {
-      current = current === value ? null : value;
-      try {
-        if (current) { localStorage.setItem(storageKey(id), current); }
-        else { localStorage.removeItem(storageKey(id)); }
-      } catch (e) {}
-      render();
-    }
-
-    upBtn.addEventListener("click", function () { choose("up"); });
-    downBtn.addEventListener("click", function () { choose("down"); });
-    render();
+    cards[id] = {
+      el: card,
+      upBtn: card.querySelector(".react-up"),
+      downBtn: card.querySelector(".react-down"),
+      mine: null,
+      counts: { up: 0, down: 0 },
+      busy: false,
+    };
   });
+
+  function render(id) {
+    var c = cards[id];
+    c.upBtn.classList.toggle("active", c.mine === "up");
+    c.downBtn.classList.toggle("active", c.mine === "down");
+    c.upBtn.setAttribute("aria-pressed", c.mine === "up");
+    c.downBtn.setAttribute("aria-pressed", c.mine === "down");
+    c.upBtn.querySelector(".react-count").textContent = c.counts.up;
+    c.downBtn.querySelector(".react-count").textContent = c.counts.down;
+    c.upBtn.disabled = c.busy;
+    c.downBtn.disabled = c.busy;
+  }
+
+  function loadInitial() {
+    fetch("/api/votes")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        Object.keys(cards).forEach(function (id) {
+          cards[id].counts = (data.counts && data.counts[id]) || { up: 0, down: 0 };
+          cards[id].mine = (data.mine && data.mine[id]) || null;
+          render(id);
+        });
+      })
+      .catch(function () { /* leave zeroed counts if the API is unreachable */ });
+  }
+
+  function choose(id, value) {
+    var c = cards[id];
+    if (c.busy) return;
+    var next = c.mine === value ? null : value;
+    c.busy = true;
+    render(id);
+
+    fetch("/api/votes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ item: id, vote: next }),
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error("vote failed");
+        return r.json();
+      })
+      .then(function (data) {
+        c.mine = next;
+        c.counts = data.counts || c.counts;
+      })
+      .catch(function () { /* leave previous state on failure */ })
+      .then(function () {
+        c.busy = false;
+        render(id);
+      });
+  }
+
+  Object.keys(cards).forEach(function (id) {
+    cards[id].upBtn.addEventListener("click", function () { choose(id, "up"); });
+    cards[id].downBtn.addEventListener("click", function () { choose(id, "down"); });
+    render(id);
+  });
+
+  loadInitial();
 })();
 </script>
 

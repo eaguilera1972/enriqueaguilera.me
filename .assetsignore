@@ -4,4 +4,6 @@
 .impeccable
 .wrangler
 wrangler.jsonc
+worker.js
+schema.sql
 README.md

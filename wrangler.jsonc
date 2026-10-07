@@ -1,9 +1,18 @@
 {
 	"name": "enriqueaguilera-me",
+	"main": "worker.js",
 	"compatibility_date": "2026-09-25",
 	"observability": { "enabled": true },
 	"assets": {
 		"directory": ".",
+		"binding": "ASSETS",
 		"not_found_handling": "404-page"
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "favorites-votes",
+			"database_id": "28bcf069-995d-462b-8212-668ee58193f3"
+		}
+	]
 }
