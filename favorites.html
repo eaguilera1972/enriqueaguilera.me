@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favorites | Enrique Aguilera</title>
+<meta name="description" content="A few things Enrique Aguilera loves — movies, shows, software, places, music, and more. Get to know him through what he's into.">
+<link rel="canonical" href="https://enriqueaguilera.me/favorites">
+<meta name="author" content="Enrique Aguilera">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGLX7CCS');</script>
+<!-- End Google Tag Manager -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Favorites — Enrique Aguilera">
+<meta property="og:description" content="A few things Enrique Aguilera loves — movies, shows, software, places, music, and more.">
+<meta property="og:url" content="https://enriqueaguilera.me/favorites">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2B5A58">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #F5F6F3;
+    --ink: #1B2433;
+    --muted: #5A6372;
+    --line: #DADFD9;
+    --pine: #2B5A58;
+    --pine-soft: #DCE8E7;
+    --display: "Libre Caslon Display", "Baskerville", "Georgia", serif;
+    --text: "Hanken Grotesk", "Helvetica Neue", "Arial", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #121A24;
+      --ink: #E8ECEF;
+      --muted: #9AA4B1;
+      --line: #27313E;
+      --pine: #8CC0BC;
+      --pine-soft: #183130;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #121A24;
+    --ink: #E8ECEF;
+    --muted: #9AA4B1;
+    --line: #27313E;
+    --pine: #8CC0BC;
+    --pine-soft: #183130;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--text);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration-color: var(--pine); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+  a:hover { color: var(--pine); }
+  :focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+
+  /* Header (shared with homepage) */
+  .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+  .mark { font-family: var(--display); font-size: 1.5rem; text-decoration: none; letter-spacing: 0.02em; }
+  .site-nav { display: flex; gap: 1.75rem; }
+  .site-nav a { text-decoration: none; font-weight: 500; font-size: 0.9375rem; color: var(--muted); }
+  .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+
+  /* Page intro */
+  .page-head { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2rem, 5vw, 3rem); max-width: 40rem; }
+  .page-title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.015em;
+    margin: 0 0 1rem;
+  }
+  .page-intro { font-size: 1.125rem; color: var(--muted); margin: 0; }
+
+  /* Category sections */
+  .fav-section { padding: clamp(2rem, 4vw, 3rem) 0; border-top: 1px solid var(--line); }
+  .fav-section h2 {
+    font-size: 0.8125rem; font-weight: 600; color: var(--pine);
+    text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 1.25rem;
+  }
+  .fav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Cards */
+  .fav-card {
+    display: flex; flex-direction: column;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    overflow: hidden;
+  }
+  .fav-visual {
+    aspect-ratio: 16 / 9;
+    background: var(--pine-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .fav-visual iframe, .fav-visual > img { width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
+  .fav-visual.contain > img { object-fit: contain; padding: 2rem; }
+  .fav-visual.type {
+    display: flex; align-items: center; justify-content: center;
+  }
+  .fav-visual.type .word {
+    font-family: var(--display);
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    color: var(--pine);
+    text-align: center;
+    line-height: 1.05;
+    padding: 0 1rem;
+  }
+  .fav-body { padding: 1.1rem 1.25rem 1.35rem; display: flex; flex-direction: column; flex: 1; }
+  .fav-eyebrow { font-size: 0.8125rem; color: var(--muted); margin: 0 0 0.15rem; }
+  .fav-title { font-family: var(--display); font-weight: 400; font-size: 1.3rem; margin: 0 0 0.4rem; line-height: 1.15; }
+  .fav-note { color: var(--muted); font-size: 0.95rem; margin: 0; flex: 1; }
+
+  .fav-react { display: flex; gap: 0.5rem; margin-top: 1rem; }
+  .react-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 3px; padding: 0.45rem 0.75rem;
+    font-family: var(--text); font-size: 0.875rem; font-weight: 500;
+    cursor: pointer;
+  }
+  .react-btn:hover { border-color: var(--pine); }
+  .react-btn.active { color: var(--paper); border-color: var(--ink); background: var(--ink); }
+  .react-btn.active.react-up { background: var(--pine); border-color: var(--pine); }
+
+  .site-footer {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    padding: 2rem 0 3rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.9375rem;
+  }
+
+  @media (max-width: 760px) {
+    .site-nav { gap: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGLX7CCS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="wrap">
+  <header class="site-header">
+    <a class="mark" href="/" aria-label="Enrique Aguilera, home">EA</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/#about">About</a>
+      <a href="/#work">Work</a>
+      <a href="/favorites" aria-current="page">Favorites</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1 class="page-title">Favorites</h1>
+      <p class="page-intro">A few things I genuinely love — no particular order within a category. React with a 👍 or 👎 if you agree (or don't).</p>
+    </div>
+
+    <section class="fav-section" aria-labelledby="cat-movie">
+      <h2 id="cat-movie">Movie</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="dumb-and-dumber">
+          <div class="fav-visual">
+            <iframe src="https://www.youtube.com/embed/l13yPhimE3o" title="Dumb and Dumber (1994) Official Trailer" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="fav-body">
+            <p class="fav-title">Dumb and Dumber</p>
+            <p class="fav-note">My all-time favorite comedy. I can quote it start to finish.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-tv">
+      <h2 id="cat-tv">TV Show</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="the-office">
+          <div class="fav-visual">
+            <iframe src="https://www.youtube.com/embed/IBJJrZ5LAVQ" title="Best of Michael Scott — The Office US" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="fav-body">
+            <p class="fav-title">The Office</p>
+            <p class="fav-note">Michael Scott lives rent-free in my head. Best comfort watch there is.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-mac">
+      <h2 id="cat-mac">Mac Software</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="alfred">
+          <div class="fav-visual"><img src="images/favorites/alfred.png" alt="Alfred app search interface" loading="lazy"></div>
+          <div class="fav-body">
+            <p class="fav-title">Alfred</p>
+            <p class="fav-note">The first thing I install on any new Mac. Keyboard-driven everything.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+        <article class="fav-card" data-fav="obsidian">
+          <div class="fav-visual"><img src="images/favorites/obsidian.png" alt="Obsidian note-taking app interface" loading="lazy"></div>
+          <div class="fav-body">
+            <p class="fav-title">Obsidian</p>
+            <p class="fav-note">Where all my notes and thinking actually live.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-web">
+      <h2 id="cat-web">Web Apps</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="granola">
+          <div class="fav-visual"><img src="images/favorites/granola.png" alt="Granola meeting notes app interface" loading="lazy"></div>
+          <div class="fav-body">
+            <p class="fav-title">Granola</p>
+            <p class="fav-note">Meeting notes that write themselves. I haven't taken manual notes since.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+        <article class="fav-card" data-fav="superhuman">
+          <div class="fav-visual contain"><img src="images/favorites/superhuman-logo.png" alt="Superhuman logo" loading="lazy"></div>
+          <div class="fav-body">
+            <p class="fav-title">Superhuman</p>
+            <p class="fav-note">The fastest email client I've ever used. Inbox zero actually feels achievable.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-places">
+      <h2 id="cat-places">Places</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="barcelona">
+          <div class="fav-visual type"><span class="word">Barcelona</span></div>
+          <div class="fav-body">
+            <p class="fav-title">Barcelona</p>
+            <p class="fav-note">Where I grew up. Still feels like home every time I'm back.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+        <article class="fav-card" data-fav="boston">
+          <div class="fav-visual type"><span class="word">Boston</span></div>
+          <div class="fav-body">
+            <p class="fav-title">Boston</p>
+            <p class="fav-note">Where I live now and run everything from.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-music">
+      <h2 id="cat-music">Musicians</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="michael-jackson">
+          <div class="fav-visual type"><span class="word">Michael Jackson</span></div>
+          <div class="fav-body">
+            <p class="fav-title">Michael Jackson</p>
+            <p class="fav-note">The greatest entertainer of all time, full stop.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+        <article class="fav-card" data-fav="george-michael">
+          <div class="fav-visual type"><span class="word">George Michael</span></div>
+          <div class="fav-body">
+            <p class="fav-title">George Michael</p>
+            <p class="fav-note">Criminally underrated songwriter. Faith is a perfect album.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fav-section" aria-labelledby="cat-soccer">
+      <h2 id="cat-soccer">Soccer Team &amp; GOAT</h2>
+      <div class="fav-grid">
+        <article class="fav-card" data-fav="fc-barcelona">
+          <div class="fav-visual type"><span class="word">FC Barcelona</span></div>
+          <div class="fav-body">
+            <p class="fav-title">FC Barcelona</p>
+            <p class="fav-note">M&eacute;s que un club. Been with them through everything.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+        <article class="fav-card" data-fav="messi">
+          <div class="fav-visual type"><span class="word">Lionel Messi</span></div>
+          <div class="fav-body">
+            <p class="fav-title">Lionel Messi</p>
+            <p class="fav-note">The GOAT. Not up for debate.</p>
+            <div class="fav-react">
+              <button type="button" class="react-btn react-up">👍 Love it too</button>
+              <button type="button" class="react-btn react-down">👎 Not for me</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Enrique Aguilera</span>
+    <span>enriqueaguilera.me</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function storageKey(id) { return "fav_reaction_" + id; }
+
+  document.querySelectorAll("[data-fav]").forEach(function (card) {
+    var id = card.getAttribute("data-fav");
+    var upBtn = card.querySelector(".react-up");
+    var downBtn = card.querySelector(".react-down");
+    var current = null;
+    try { current = localStorage.getItem(storageKey(id)); } catch (e) {}
+
+    function render() {
+      upBtn.classList.toggle("active", current === "up");
+      downBtn.classList.toggle("active", current === "down");
+      upBtn.setAttribute("aria-pressed", current === "up");
+      downBtn.setAttribute("aria-pressed", current === "down");
+    }
+
+    function choose(value) {
+      current = current === value ? null : value;
+      try {
+        if (current) { localStorage.setItem(storageKey(id), current); }
+        else { localStorage.removeItem(storageKey(id)); }
+      } catch (e) {}
+      render();
+    }
+
+    upBtn.addEventListener("click", function () { choose("up"); });
+    downBtn.addEventListener("click", function () { choose("down"); });
+    render();
+  });
+})();
+</script>
+
+</body>
+</html>
